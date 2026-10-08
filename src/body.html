@@ -1,0 +1,81 @@
+
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"><defs><symbol id="i-reset" viewBox="0 0 24 24"><path d="M4 10a8 8 0 1 1 1 8M4 4v6h6"/></symbol><symbol id="i-recipe" viewBox="0 0 24 24"><path d="M9 3h6m-5 0v7l-6 9a1 1 0 0 0 1 2h14a1 1 0 0 0 1-2l-6-9V3M7 16h10"/><circle cx="12" cy="13" r=".5"/></symbol><symbol id="i-redip" viewBox="0 0 24 24"><path d="M5 8a8 8 0 1 1-1 8M5 3v5h5M12 9v8m-3-3 3 3 3-3"/></symbol><!-- PHOSPHOR_ICONS -->
+<symbol id="i-brush" viewBox="0 0 24 24"><path d="m14.3 4.3 4.9-2 2.5 2.5-2 4.9-8.8 8.8-5.4-5.4zM14.3 4.3l5.4 5.4M5.5 13.1c-2.3.6-3.6 3.6-3.2 7.5 3.9.4 6.9-.9 7.5-3.2M2.3 20.6l4.2-4.2"/></symbol>
+<symbol id="i-photo" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="1"/><circle cx="8" cy="9" r="1.5"/><path d="m3 17 5-5 4 4 4-6 5 7"/></symbol>
+<symbol id="i-erase" viewBox="0 0 24 24"><path d="m14 3 7 7-11 11H5l-3-3zM7 13l7 7M11 21h11"/></symbol>
+<symbol id="i-undo" viewBox="0 0 24 24"><path d="M3 11h11a6 6 0 0 1 0 12" transform="translate(0 -4)"/><path d="M7 3 3 7l4 4"/></symbol>
+<symbol id="i-redo" viewBox="0 0 24 24"><path d="M21 7H10a6 6 0 0 0 0 12M17 3l4 4-4 4"/></symbol>
+<symbol id="i-back" viewBox="0 0 24 24"><path d="M21 12H3m6-6-6 6 6 6"/></symbol>
+<symbol id="i-clear" viewBox="0 0 24 24"><path d="M3 6h18M9 6V3h6v3M5 6l1 15h12l1-15M10 10v7M14 10v7"/></symbol>
+<symbol id="i-sym" viewBox="0 0 24 24"><path d="M12 2v20M3.3 7l17.4 10M3.3 17l17.4-10"/><circle cx="12" cy="12" r="6.5"/><circle cx="12" cy="12" r="2"/></symbol>
+<symbol id="i-flower" viewBox="0 0 24 24"><path d="M12 10C4-3 2 9 10 12c-13 8-1 10 2 2 8 13 10 1 2-2 13-8 1-10-2-2Z"/><circle cx="12" cy="12" r="2"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M3 12h18m-6-6 6 6-6 6"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24"><path d="m5 5 14 14M19 5 5 19"/></symbol>
+<symbol id="i-save" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 15v6h16v-6"/></symbol>
+<symbol id="i-gallery" viewBox="0 0 24 24"><path d="M4 4h16v17H4zM2 2h20M8 4v17M11 8h6M11 12h6M11 16h4"/></symbol>
+<symbol id="i-sound" viewBox="0 0 24 24"><path d="M4 9h4l5-4v14l-5-4H4zM17 8a6 6 0 0 1 0 8M20 5a10 10 0 0 1 0 14"/></symbol>
+<symbol id="i-mute" viewBox="0 0 24 24"><path d="M4 9h4l5-4v14l-5-4H4zM17 9l5 6m0-6-5 6"/></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path d="M12 3v17m-5-5 5 5 5-5"/></symbol>
+<symbol id="i-up" viewBox="0 0 24 24"><path d="M12 21V4m-5 5 5-5 5 5"/></symbol>
+<symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 17V3m-5 5 5-5 5 5M4 15v6h16v-6"/></symbol>
+<symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7v.2"/></symbol>
+<symbol id="i-repeat" viewBox="0 0 24 24"><path d="M20 7h-9a7 7 0 1 0 7 10M16 3l4 4-4 4"/></symbol>
+</defs></svg>
+<main class="app" id="app">
+<div class="topline"></div>
+<header class="header"><div class="brand"><span class="brand-small">蓝染工坊<small>INDIGO STUDIO</small></span></div><span class="brand-tag">草木 · 手作</span></header>
+<nav class="stepbar" aria-label="制作进度" hidden><span class="step" data-step="0"><b>〇</b>备色</span><i></i><span class="step" data-step="1"><b>一</b><em id="resistStepName">画蜡</em></span><i></i><span class="step" data-step="2"><b>二</b>浸染</span><i></i><span class="step" data-step="3"><b>三</b><em id="releaseStepName">脱蜡</em></span><i></i><span class="step" data-step="4"><b>四</b>晾干</span></nav>
+<!-- HOME_PAGE -->
+
+<!-- RECIPE_PAGE -->
+<section class="page" id="editorPage" hidden>
+<div class="workbench-heading"><h1 id="workbenchTitle">画蜡</h1><button id="techniqueBtn" class="technique-switch">蜡染 · 切换 ↗</button></div>
+<button class="editor-mix-link" id="openMixBtn" aria-label="选用染液配方"><span class="recipe-dot" id="editorRecipeDot" aria-hidden="true"></span><span id="editorRecipeName">蓝草初染 · 染液已备好</span><span class="mix-change">换一种色 ↗</span></button>
+<div class="mode-tabs" id="waxModeTabs" role="tablist" aria-label="创作方式"><button role="tab" id="drawTab" aria-selected="true" class="active"><svg><use href="#i-brush"/></svg>手绘一方</button><button role="tab" id="photoTab" aria-selected="false"><svg><use href="#i-photo"/></svg>照片入染</button></div>
+<div id="tieModeTabs" class="tie-mode-tabs" role="group" aria-label="整理布料的方法" hidden><button id="tieGatherBtn" aria-pressed="true">捏布收拢</button><button id="tieFoldBtn" aria-pressed="false">划线对折</button></div>
+<div class="cloth-meta"><span id="clothLabel">素布 · 指尖作笔</span><button id="guideBtn" aria-label="查看画蜡提示">留白提示 <svg style="width:12px;height:12px"><use href="#i-info"/></svg></button></div>
+<div class="cloth-frame" id="clothFrame"><div class="cloth-stage" id="clothStage"><button id="cropReturnBtn" class="crop-return" hidden>取景好了，回到蜡稿</button><canvas id="drawCanvas" width="768" height="768" aria-label="画蜡区域。按住并移动手指或鼠标绘制纹样。" tabindex="0"></canvas><div class="empty-hint" id="drawHint"><svg viewBox="0 0 100 100"><g transform="translate(50 50)"><path d="M0-6C-26-57-42-17-6 0-57 26-17 42 0 6c26 51 42 11 6-6 51-26 11-42-6-6Z"/><circle r="5"/><circle r="37" stroke-dasharray="1 5"/></g></svg><span>指尖作笔，随手画几笔</span></div><div class="empty-hint" id="photoHint" hidden><svg viewBox="0 0 100 100"><rect x="14" y="14" width="72" height="72"/><circle cx="37" cy="35" r="8"/><path d="m14 72 24-23 18 16 12-19 18 26M8 20V8h12M80 8h12v12M8 80v12h12M80 92h12V80"/></svg><span>把一张照片，交给草木色</span></div></div></div>
+<div id="drawControls"><div class="tools" role="toolbar" aria-label="画蜡工具"><button class="tool active" id="brushBtn" aria-pressed="true"><svg><use href="#i-brush"/></svg>蜡笔</button><button class="tool" id="eraserBtn" aria-pressed="false"><svg><use href="#i-erase"/></svg>擦除</button><button class="tool" id="patternBtn"><svg><use href="#i-flower"/></svg>纹样</button><button class="tool" id="undoBtn" disabled><svg><use href="#i-undo"/></svg>撤回</button><button class="tool" id="redoBtn" disabled aria-label="重做"><svg><use href="#i-redo"/></svg>重做</button><button class="tool" id="drawingSettingsBtn"><svg><use href="#i-sym"/></svg>笔触</button></div><div id="drawingSettings" class="settings-content" hidden><h4>笔触与对称</h4><div class="brush-row"><label for="brushSize">笔触粗细</label><input type="range" id="brushSize" min="4" max="40" value="13" aria-label="笔触粗细"><span class="brush-dot"><i id="brushDot"></i></span></div><div class="symmetry-options" role="group" aria-label="纹样对称"><button data-symmetry="free" aria-pressed="true">随手画</button><button data-symmetry="mirror" aria-pressed="false">左右镜像</button><button data-symmetry="four" aria-pressed="false">四方对称</button><button data-symmetry="six" aria-pressed="false">六瓣对称</button><button data-symmetry="eight" aria-pressed="false">八方对称</button></div><button id="symmetryBtn" aria-pressed="false" hidden>六瓣对称</button><button class="settings-clear" id="clearBtn" disabled>清除手绘</button></div></div>
+<div class="photo-tools" id="photoControls" hidden><p class="work-caption" id="photoCaption">先把照片化作纹样，再染上这一碗草木色。</p><div class="photo-empty-controls" id="photoEmptyControls"><button class="outline-btn" id="uploadEmptyBtn"><svg><use href="#i-upload"/></svg>选一张照片</button></div><div id="photoFilledControls" hidden><div class="photo-main-row"><button class="outline-btn" id="replacePhotoBtn"><svg><use href="#i-photo"/></svg>换图</button><button class="outline-btn" id="removePhotoBtn">移除照片</button><div class="photo-styles" aria-label="照片蜡稿"><button id="halftoneBtn" class="active" aria-pressed="true">留白蜡稿</button><button id="cutoutBtn" aria-pressed="false">线描蜡稿</button></div></div><button class="outline-btn photo-settings-btn" id="photoSettingsBtn">调整蜡稿</button><div id="photoSettings" class="settings-content" hidden><div class="photo-tune"><label for="photoLight">主体留白</label><input type="range" id="photoLight" min="0" max="100" value="50" aria-label="主体留白强度"></div><div class="photo-tune"><label for="photoDetail">细节保留</label><input type="range" id="photoDetail" min="0" max="100" value="55" aria-label="细节保留程度"></div><div class="photo-tune"><label for="photoDepth">染色深浅</label><input type="range" id="photoDepth" min="0" max="100" value="50" aria-label="染色深浅"></div><details class="photo-crop-details"><summary>取景</summary><div class="photo-crop-settings"><div class="photo-tune"><label for="photoZoom">画面缩放</label><input type="range" id="photoZoom" min="100" max="300" value="100" aria-label="照片缩放"><button class="outline-btn" id="centerPhotoBtn">居中</button></div><button class="invert-control source-photo-control" id="sourcePhotoBtn" aria-pressed="false">看原图取景</button><button class="invert-control" id="invertBtn" aria-pressed="false">染色反转</button></div></details></div></div></div>
+<div class="tie-tools" id="tieControls" hidden>
+ <p id="tieHint" role="status">按住布边向里推，揉出自己的褶皱</p>
+ <div id="tiePrepareTools" class="tie-button-row"><button id="tieLiftBtn" hidden>提起布心</button><button id="tieRandomBtn">收拢一侧</button><button id="tieFoldHorizontal" hidden>横向对折</button><button id="tieFoldVertical" hidden>竖向对折</button><button id="tieUndoBtn" disabled>撤销一步</button><button id="tieResetBtn" disabled>重新铺平</button></div>
+ <div id="tieBindTools" hidden><div class="tie-tension"><label for="tieTension">拉紧程度</label><span>松</span><input type="range" id="tieTension" min="0" max="100" value="0" aria-label="拉紧程度"><span>紧</span></div><div class="tie-button-row"><button id="tieWrapBtn">放上一根绳</button><button id="tieTightenBtn" disabled>拉一下绳头</button><button id="tieRemoveBtn" disabled>拆掉选中</button><button id="tieBackBtn">返回理布</button><button id="tieCompareBtn" disabled>核对留白 ↗</button></div></div>
+</div>
+<div id="tiePlanControls" hidden></div>
+<input type="file" id="photoInput" accept="image/*" hidden>
+<div class="action-area"><button class="primary" id="startBtn" disabled><span>画好了，去染布</span><svg><use href="#i-arrow"/></svg></button></div>
+</section>
+<section class="page" id="ritualPage" hidden>
+
+<div class="ritual-hero"><div class="eyebrow" id="ritualEyebrow">贰 / 入靛</div><h2 id="ritualTitle">浸染</h2><p id="ritualDesc">向下拖动布料，浸入染液</p></div>
+<div class="soak-clock" id="soakClock" hidden><span>浸泡时间</span><strong><output id="soakTime">00.0</output><small> / 20 秒</small></strong><span id="soakDepth">浅蓝</span></div>
+<div class="ritual-stage" id="ritualStage"><canvas id="ritualCanvas" width="768" height="840" tabindex="0" aria-label="蓝染交互区，可拖动布料，也可使用下方按钮完成操作。"></canvas><span class="ritual-side" id="ritualSide">一缸草木色</span><span class="stage-count" id="stageCount">第一浸</span></div>
+<div class="gesture-hint" id="gestureHint"><svg><use href="#i-down"/></svg><span>按住布料，向下拖入染缸</span></div><div class="progress-line"><span id="ritualProgress"></span></div>
+<div class="dry-tools" id="dryTools" hidden><div class="dry-reading"><span>晾晒</span><output id="dryPercent">0%</output></div><div class="wind-meter" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="dry-action-row"><button class="mic-button" id="micBtn">吹气</button><button class="fan-button" id="fanBtn" aria-pressed="false">扇风</button></div><p class="mic-status" id="micStatus" role="status"></p><button class="privacy-note privacy-info" id="micInfoBtn" aria-label="了解麦克风">ⓘ</button></div>
+<div class="ritual-actions"><div class="ritual-primary-row"><button id="redipBtn" class="round-redip" aria-label="再浸一会儿" title="再浸一会儿" hidden><svg><use href="#i-redip"/></svg></button><button class="primary" id="ritualPrimary">浸入染液</button></div><button class="secondary" id="ritualSecondary" hidden>自动去蜡</button><button class="back-link ritual-back" id="backEditorBtn">返回画布</button><p class="footnote" id="ritualFootnote"></p></div>
+</section>
+<section class="page" id="resultPage" hidden>
+<div class="result-hero"><p></p></div>
+<div class="result-scroll"><canvas id="resultCanvas" width="768" height="768" class="result-canvas" aria-label="完成的蓝染作品"></canvas><div class="result-name-row"><input class="name-input" id="resultName" maxlength="12" value="一方闲蓝" aria-label="为作品题名，最多十二个字"><span class="mini-seal">手<br>作</span></div><p class="result-info" id="resultInfo"></p></div>
+<p class="success-note" id="saveStatus" role="status">正在保存作品…</p><div class="result-save-tools"><button id="manageFullGallery" hidden>去作品页腾出位置</button><button id="retryCurrentSave" hidden>重新保存</button></div>
+<div class="action-area"><button class="primary" id="exportBtn"><svg><use href="#i-save"/></svg>保存作品</button><div class="result-buttons"><button id="againBtn"><svg><use href="#i-repeat"/></svg>再次创作</button><button id="otherModeBtn"><svg><use href="#i-photo"/></svg>试试照片入染</button></div></div>
+</section>
+
+<section class="page" id="galleryPage" hidden aria-label="作品列表">
+  <div class="gallery-head"><span class="gallery-count-label">藏品 <span class="gallery-count" id="galleryCount">0</span> 件</span><button class="gallery-manage" id="galleryManage" aria-pressed="false">选择</button></div>
+  <div id="galleryToolbar" class="gallery-toolbar" hidden><button id="gallerySelectAll">全选</button><button id="galleryExport" disabled>保存到相册</button><button id="galleryDelete" disabled>删除</button><span id="gallerySelected" class="gallery-selected" aria-live="polite">已选 0 幅</span></div>
+  <p id="galleryNotice" class="gallery-notice" role="status" hidden></p>
+  <div id="galleryPending" class="gallery-pending" hidden></div>
+  <div id="galleryGrid" class="gallery-grid"></div>
+  <div id="galleryEmpty" class="gallery-empty" hidden><svg><use href="#i-gallery"/></svg><h2>还没有作品</h2><p>从首页开始制作，完成后会保存在这里</p></div>
+  <p class="gallery-storage" id="galleryStorage" role="status">正在打开作品…</p><button id="galleryRetry" class="gallery-retry" hidden>重新保存未存好的作品</button>
+</section>
+<nav class="bottom-nav" aria-label="主要导航"><button id="makeNav" class="active" aria-current="page"><svg class="ph" aria-hidden="true"><use href="#ph-house"/></svg><span>首页</span></button><button id="worksNav"><svg class="ph" aria-hidden="true"><use href="#ph-images"/></svg><span>作品</span></button></nav>
+
+<!-- DISCOVERY_PAGE -->
+</main>
+<div class="global-sound"><button id="musicToggle" aria-label="关闭音乐" aria-pressed="true"><svg><use href="#i-sound"/></svg></button><span id="musicNote" class="sr-only" role="status"></span></div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="modal" id="modal" hidden><div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle"><div class="sheet-head"><h3 id="sheetTitle"></h3></div><div id="sheetBody"></div><div class="sheet-close-row"><button id="closeModal" class="sheet-close-button" aria-label="关闭">关闭</button></div></div></div>

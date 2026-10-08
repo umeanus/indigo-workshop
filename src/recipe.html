@@ -1,0 +1,31 @@
+<section class="page recipe-lab" id="mixPage" hidden aria-label="草木配方独立体验">
+  <div class="recipe-lab-nav"><span>一段调色的慢时光</span></div>
+  <div class="hero mix-hero"><div><h1>调一碗草木色</h1><p>给喜欢的颜色，留一张小方。</p></div><div class="hero-side">草木有色<br>自成一方</div></div>
+  <div class="recipe-start-label"><span>从一碗现成的色开始</span><small>点选即备好</small></div>
+  <div class="lab-palette" aria-label="选择已备好的草木色">
+    <button data-lab-palette="indigo" aria-pressed="true"><span class="prepared-cloth" style="--swatch:#31628c" aria-hidden="true"></span><strong>靛蓝</strong><small>蓝草制靛</small></button>
+    <button data-lab-palette="madder" aria-pressed="false"><span class="prepared-cloth" style="--swatch:#b1564a" aria-hidden="true"></span><strong>茜草红</strong><small>茜草根</small></button>
+    <button data-lab-palette="ochre" aria-pressed="false"><span class="prepared-cloth" style="--swatch:#be9938" aria-hidden="true"></span><strong>槐米黄</strong><small>槐树花蕾</small></button>
+    <button data-lab-palette="green" aria-pressed="false"><span class="prepared-cloth" style="--swatch:#557d63" aria-hidden="true"></span><strong>黄蓝叠绿</strong><small>黄檗 × 靛蓝</small></button>
+  </div>
+  <div class="mix-scene-wrap"><canvas id="mixCanvas" width="768" height="400" tabindex="0" role="button" aria-label="草木色碗。沿碗内画圈搅拌，也可按回车、空格或下方搅一搅按钮。"></canvas><span class="mix-liquid-label">一碗草木的颜色</span><div class="mix-status" id="mixStatus" role="status" aria-live="polite">这碗色已备好，随时可以去创作</div></div>
+  <div class="mix-formula"><span class="mix-swatch" id="mixSwatch" aria-hidden="true"></span><p><b id="mixToneName">蓝草初染</b><span class="formula-value" id="mixFormulaText">靛蓝 3 份 · 水感 4 份</span></p><button class="mix-reset" id="resetMixBtn">重调</button></div>
+  <details class="recipe-adjustments"><summary>再调一点自己的颜色 <span aria-hidden="true">＋</span></summary>
+    <p class="recipe-adjust-intro">每一份都是屏幕里的色意，浓淡随心。</p>
+    <div id="pigmentBowls" class="recipe-adjust-list">
+      <div class="recipe-adjust-row" style="--pigment:#31628c"><span class="recipe-material-dot" aria-hidden="true"></span><label>靛蓝<small>蓝草制靛</small></label><button data-remove-pigment="indigo" aria-label="减少一份靛蓝">−</button><output id="indigoUnits">3 份</output><button data-add-pigment="indigo" aria-label="加入一份靛蓝">＋</button></div>
+      <div class="recipe-adjust-row" style="--pigment:#b1564a"><span class="recipe-material-dot" aria-hidden="true"></span><label>茜草红<small>取色于茜草根</small></label><button data-remove-pigment="madder" aria-label="减少一份茜草红">−</button><output id="madderUnits">0 份</output><button data-add-pigment="madder" aria-label="加入一份茜草红">＋</button></div>
+      <div class="recipe-adjust-row" style="--pigment:#be9938"><span class="recipe-material-dot" aria-hidden="true"></span><label>槐米黄<small>取色于槐树花蕾</small></label><button data-remove-pigment="ochre" aria-label="减少一份槐米黄">−</button><output id="ochreUnits">0 份</output><button data-add-pigment="ochre" aria-label="加入一份槐米黄">＋</button></div>
+      <div class="recipe-adjust-row" style="--pigment:#557d63"><span class="recipe-material-dot" aria-hidden="true"></span><label>黄蓝叠绿<small>黄檗黄与靛蓝叠染色样</small></label><button data-remove-pigment="green" aria-label="减少一份叠绿色样">−</button><output id="greenUnits">0 份</output><button data-add-pigment="green" aria-label="加入一份叠绿色样">＋</button></div>
+      <div class="recipe-adjust-row" style="--pigment:#705b41"><span class="recipe-material-dot" aria-hidden="true"></span><label>茶褐<small>温润茶色</small></label><button data-remove-pigment="tannin" aria-label="减少一份茶褐">−</button><output id="tanninUnits">0 份</output><button data-add-pigment="tannin" aria-label="加入一份茶褐">＋</button></div>
+    </div>
+    <div class="water-row"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2C10 6 5 11 5 15a7 7 0 0 0 14 0c0-4-5-9-7-13Z"/><path d="M8 15c0 3 2 4 4 4"/></svg><div class="water-label">水感<small>多一点，颜色浅一点</small></div><button id="lessWaterBtn" aria-label="减少一份水感">−</button><output id="waterUnits">4 份</output><button id="moreWaterBtn" aria-label="加入一份水感">＋</button></div>
+    <p id="mixColorNote" class="recipe-color-note">份数只决定屏幕里的浓淡与配色，不是实际染色用量。</p>
+  </details>
+  <div class="mix-actions"><button class="mix-stir" id="stirMixBtn"><svg aria-hidden="true"><use href="#i-repeat"/></svg><span>再搅一搅</span></button><button class="primary" id="mixReadyBtn">用这碗色去创作 <svg aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+  <div class="mix-progress-track" role="progressbar" aria-label="搅拌进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100" id="mixProgress"><span id="mixProgressFill" style="width:100%"></span></div>
+  <div class="recipe-actions"><button id="saveRecipeBtn">存为草木配方</button><button id="openRecipesBtn">已存配方 <span id="recipeCount">0</span></button></div>
+  <p class="recipe-lab-help">存下喜欢的配方，下次可以直接选用。<br>点击「用这碗色去创作」，再把颜色带回画布。</p>
+  <p class="mix-disclaimer">数字调色练习，比例不对应实物配方。<br>绿色借鉴黄檗黄与靛蓝的叠染；实物色相随纤维与工艺变化。</p>
+<div class="page-lower-return"><button id="leaveRecipeLabBtn" class="page-return-button"><svg aria-hidden="true"><use href="#i-back"/></svg><span>返回</span></button></div>
+</section>

@@ -1,0 +1,9 @@
+// Read-only diagnostics for integration and regression testing.
+window.IndigoDemo={version:'19.0.0',getState:()=>({screen,itemType:selectedItemId,mode,technique,ties:technique==='tie'?tiePlan.bindings.length:0,tiePreparation:tiePlanUndoStack.length,tieStage:tiePlan.tool==='bind'?'bind':'prepare',tieTool:tiePlan.tool,tieUnfold:r.tieUnfold,untied:r.untied.length,phase:r.phase,soakSeconds:r.soakSeconds,soakTotal:r.soakTotal,craftMode,cycles:r.cycle,fanActive:performance.now()<r.fanUntil,scraped:r.scrape,dry:r.dry,wind:r.wind,microphone:mic.state,micActive:!!mic.stream,hasPhoto:!!photo,photoStyle,photoInverted,photoScale,photoSourcePreview,strokes:commands.length,collection:gallery.length,pendingCollection:pendingWorks.length,unsavedCollection:collectionItems().filter(isUnsaved).length,collectionReady:galleryReadyDone,collectionLimit:GALLERY_LIMIT,storageIssue,memoryOnly,sound}),getIntegrationNotes:()=>({offline:true,platformBridge:'window.xhs.miniTool.saveImageToPhotosAlbum({filePath})',noNetworkRequests:true,microphone:'User-initiated RMS amplitude, locally processed, no recording/upload; HTTPS or localhost required',cloth:'Separate tonal-wax and whole-sheet pinch, gather, fold and bind workflows; 20-second bath, rinse then oxidation and animated wind drying'})};
+window.IndigoDemo.mixing={getRecipe:()=>mixSnapshot(),getSavedRecipes:()=>savedRecipes.map(x=>({...x,units:{...x.units}})),getDyeTone,getDevelopTone,isIndigoRecipe,recipeSummary,getState:()=>({progress:mixStirProgress,stirring:mixAnimating,storageReadable:recipeStoreReadable,storageMessage:recipeStoreMessage,recipeCount:savedRecipes.length})};
+window.IndigoApp=window.IndigoDemo;
+window.IndigoApp.getLayoutDiagnostics=getLayoutDiagnostics;
+initStudio();replay();setMode('draw');drawHomeCloth();setScreen('home',{history:false});
+try{history.replaceState({yifanglan:true,screen:'home'},'','#home');}catch{}
+if(typeof initDiscovery==='function')initDiscovery();
+scheduleLayout();

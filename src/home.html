@@ -1,0 +1,25 @@
+<section class="page home-page" id="homePage" aria-label="首页">
+  <div class="studio-hero">
+    <p class="studio-eyebrow">A LITTLE BLUE, MADE BY YOU.</p>
+    <h1>把草木的蓝，<br>染进日常。</h1>
+    <p class="studio-note">一方布，一双手<br>留住每一次不同的蓝。</p>
+    <img class="studio-art" src="__UI_HERO__" alt="染缸、棉布与晾挂的蓝染作品" width="1774" height="887">
+  </div>
+  <button class="studio-start fabric-card" id="startMakingBtn">
+    <span><small>从一方素布开始</small><strong>开始创作</strong><span id="homeStartHint">选一块布，染出自己的纹样</span></span>
+    <svg class="ph start-arrow" aria-hidden="true"><use href="#ph-arrow-right"/></svg>
+  </button>
+  <div class="studio-explore">
+    <button class="studio-entry fabric-card" id="homeRecipesBtn"><svg class="ph" aria-hidden="true"><use href="#ph-palette"/></svg><b>染液配方</b><small>调一碗自己的草木色</small><svg class="ph entry-arrow" aria-hidden="true"><use href="#ph-arrow-right"/></svg></button>
+    <button class="studio-entry fabric-card" id="homeCultureBtn"><svg class="ph" aria-hidden="true"><use href="#ph-book-open"/></svg><b>蓝染小识</b><small>认识蓝染、扎染与蜡染</small><svg class="ph entry-arrow" aria-hidden="true"><use href="#ph-arrow-right"/></svg></button>
+  </div>
+  <button id="musicCredit" class="home-settings">设置说明</button>
+  <p class="studio-local-note">作品保存在当前浏览器，喜欢的记得导出。</p>
+</section>
+
+<section class="page items-page" id="itemsPage" hidden aria-label="选择创作物件">
+  <div class="items-heading"><h1>今天，染点什么？</h1></div>
+  <div id="itemSwiper" class="item-swiper" role="region" aria-label="布料物件，左右滑动选择" aria-roledescription="轮播" tabindex="0"></div>
+  <div id="itemDots" class="item-dots" aria-label="物件选择"></div>
+  <div class="page-lower-flow"><button id="itemsBackBtn" class="items-back flow-back" aria-label="返回首页"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m13 5-7 7 7 7M6 12h14"/></svg></button><button class="primary item-continue" id="selectItemBtn">开始创作<svg class="ph" aria-hidden="true"><use href="#ph-arrow-right"/></svg></button></div>
+</section>
